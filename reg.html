@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FF</title> 
+    <link rel="stylesheet" type="text/css" href="webcss.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;0,700;1,200;1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head> 
+
+
+
+
+<body>
+
+    <!-- header -->
+    <section class="header">
+        <nav> 
+            <a href="index.html"><img src="logo.jpg"></a><br> 
+            <div class="nav-links" id="navlinks">
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="work.html">Workouts</a></li>
+                <li><a href="sup2.html">Supplements</a></li>
+                <li><a href="calc.html">Gym Calc</a></li>
+                <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+        
+
+
+        
+        <nav><br><br>
+            <a href="login.html"><img src=""></a>
+        </nav>
+
+        
+        <form name="contactForm" onsubmit="return validateForm()" method="post" action="con.php">
+            <h2>REGISTER NOW</h2>
+            <div class="row">
+                <label>Name: </label>
+                <input type="text" name="name">
+                <div class="error" id="nameErr"></div>
+            </div>
+            <!-- <div class="row">
+                <label>School: </label>
+                <select name="school">
+                    <option>Select</option>
+                    <option>STME</option>
+                    <option>SBM</option>
+                    <option>SOS</option>
+                    <option>SOL</option>
+                    <option>SOHM</option>
+                </select>
+                <div class="error" id="schoolErr"></div>
+            </div> -->
+            
+            <div class="row">
+                <label>Contact number: </label>
+                <input type="text" name="mobile" maxlength="10">
+                <div class="error" id="mobileErr"></div>
+            </div>
+
+            <div class="row">
+                <label>Email address: </label>
+                <input type="text" name="email">
+                <div class="error" id="emailErr"></div>
+            </div>
+
+            <!-- <div class="row">
+                <label>Are you in a team: </label>
+                <div class="form-inline">
+                    <label><input type="radio" name="choice" value="Yes">Yes</label> <br>
+                    <label><input type="radio" name="choice" value="No">No</label>
+                </div> -->
+                
+                <div class="error" id="choiceErr"></div>
+            </div>
+
+            <!-- <div class="row">
+                <label>If yes, no. of members: </label>
+                <input type="number" name="members">
+                <div class="error" id="memberErr"></div>
+            </div> -->
+
+            
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+
+
+
+
+<script>
+    function display()
+    {
+        DispWin=window.open()
+        message="<b> You have been registered! Here are the details we recieved: </b>" + "<br><br>";
+        message += "<b> Full name: </b>" + document.contactForm.name.value + "<br><br>";
+        // message += "<b> School: </b>" + document.contactForm.school.value + "<br><br>";
+        message += "<b> Phone number: </b>" + document.contactForm.mobile.value + "<br><br>";
+        message += "<b> Email Address: </b>" + document.contactForm.email.value + "<br><br>";
+        // message += "<b> Team: </b>" + document.contactForm.choice.value + "<br><br>";
+        // message += "<b> No. of members: </b>" + document.contactForm.members.value + "<br><br>";
+        // message += "<b> Team name: </b>" + document.contactForm.team.value + "<br><br>";
+      
+        DispWin.document.write(message);
+    }
+
+function printError(elemId, hintMsg) 
+{
+    document.getElementById(elemId).innerHTML = hintMsg;
+}
+
+function validateForm() 
+{
+    var name = document.contactForm.name.value;
+    var email = document.contactForm.email.value;
+    var mobile = document.contactForm.mobile.value;
+    var emailErr = mobileErr  = nameErr = true;
+
+    if(name == "") {
+        printError("nameErr", "Cannot leave field empty");
+    }
+    else
+    {
+        nameErr = false;
+    }
+
+    if(mobile == "") 
+    {
+        printError("mobileErr", "Cannot leave field empty");
+    } 
+    else 
+    {
+        var regex = /^[1-9]\d{9}$/;
+        if(regex.test(mobile) === false) 
+        {
+            printError("mobileErr", "Enter valid phone number");
+        } 
+        else
+        {
+            printError("mobileErr", "");
+            mobileErr = false;
+        }
+    }
+    
+    if(email == "") 
+    {
+        printError("emailErr", "Cannot leave field empty");
+    } 
+    else 
+    {
+      
+        var regex = /^\S+@\S+\.\S+$/;
+        if(regex.test(email) === false) 
+        {
+            printError("emailErr", "Enter valid email address");
+        } 
+        else
+        {
+            printError("emailErr", "");
+            emailErr = false;
+        }
+    }
+    if((nameErr || emailErr || mobileErr ) == true) 
+    {
+       return false;
+    }
+    else 
+    {
+        display();
+    }
+};
+</script>
+
+
+
+    
+
+   
+                <br><br>          <br><br>  <br><br>  <br><br>   <br><br>  <br><br>  <br><br>  <br><br>  <br><br> 
+          
+    
+        <!-- footer -->
+        <section class="footer">
+            <div class="icon">
+                <a href="https://www.linkedin.com/in/saunved-palve-aa9342236/"> <span><i class="fab  fa-linkedin"></i></span></a> 
+
+                <a href="https://twitter.com/Saunved1"> <span><i class="fab  fa-twitter"></i></span></a> 
+     
+                <a href="https://www.instagram.com/saunved1/t"> <span><i class="fab  fa-instagram"></i></span></a> 
+    <br><br>
+            </div>
+        <p style="color: greenyellow; font-size: small;" ><spa style="color: white; font-size: small;"> &copy;</spa> Made by<span style="color: white;"> Saunved Palve</span></p>
+        </section>
+        <div class="line"></div>
+
+
+
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                font-family: 'Oswald', sans-serif;
+            }
+            
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            
+            form {
+                width: 500px;
+                margin: auto;
+                border-radius: 50px;
+                height: 350px;
+                background: rgba(19, 23, 12, 0.665);
+                color: greenyellow;
+                top: 53%;
+                left: 50%;
+                position: absolute;
+                transform: translate(-50%,-50%);
+                box-sizing: border-box;
+                padding: 30px 30px;
+            }
+            
+            label {
+                display: block;
+                margin-bottom: 3px;
+            }
+            
+            .form-inline {
+                border: 1px solid black;
+                padding: 8px 10px 4px;
+                border-radius: 2px;
+            }
+        
+            .form-inline label, .form-inline input {
+                display: inline-block;
+                width: auto;
+                padding-right: 15px;
+                padding-left: 10px;
+            }
+            
+            h2{
+                text-align: center;
+                padding-right: 10px;
+            }
+            
+            .error {
+                color: red;
+                font-size: 80%;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            
+            input, select {
+                border: 1px solid greenyellow;
+                padding: 10px;
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+                border-radius: 2px;
+            }
+            
+            input[type="submit"] {
+                color: greenyellow;
+                display: inline-block;
+                text-decoration: none;
+                border: 1px solid #000000;
+                padding: 12px 24px;
+                background: transparent;
+                position: relative;
+                cursor: pointer;
+                width: 100%;
+                text-align: center;
+                padding-left: 100px;
+            }
+            input[type="submit"]:hover {
+                border: 1px solid white;
+                background: greenyellow;
+                transition: 1s;
+                color: black;
+            }
+        
+            .row{
+                padding-right: 10px;
+        
+            }
+            
+        </style>
+
+
+</body>
+</html>

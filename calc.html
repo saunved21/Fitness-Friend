@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FF.Supplements</title> 
+    <link rel="stylesheet" type="text/css" href="webcss.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;0,700;1,200;1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+</head> 
+<body>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+
+    <a class="gotop" href="#"> <i class="fas  fa-arrow-up"></i></a>
+
+    
+
+
+
+    <!-- header -->
+
+    <section class="sub-header2">
+        <nav> 
+            <!-- <div class="logo-o" id="logo-o"> <a href="web.html"><img src="logo.jpg"></a><br>  </div>  -->
+            <a href="index.html"><img src="logo.jpg"></a><br> 
+            <div class="nav-links" id="navlinks">
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="work.html">Workouts</a></li>
+                <li><a href="sup2.html">Supplements</a></li>
+                <li><a href="">Gym Calc</a></li>
+                <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <!-- <i class="fa  fa-bars" onclick="showMenu()"></i> -->
+        </nav>
+         <h1 style="padding-top: 10%; color: greenyellow;" >  Gym Calculator</h1>
+    </section>
+    <hr style="background-color: greenyellow; width: 100vw; height: 5vh;">
+
+
+
+
+    <h2 style="padding-left: 100px; padding-right: 100px; color: white; padding-top:
+     50px; padding-bottom: 50px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;";"> Gym calculator will be your strongest tool to 
+     understand your body at a current state. Each reading will vary from person to person thus providing us a clear 
+    and simple path to take care of ur body.  </h2> 
+
+
+    <body>
+    
+
+
+        <style media="screen">
+            
+            body{
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                font-family: sans-serif;
+                background-color:rgba(25,25,25,255);
+                min-height: 100vh;
+            }
+           
+
+            h2{
+                font-size: 30px;
+                font-weight: 600;
+            }
+            .text{
+                text-align: left;
+                margin-left: 40px;
+            }
+
+            .text1{
+                text-align: center;
+                margin-left: 40px;
+            }
+
+            #w, #h, #z{
+                color: greenyellow;
+                text-align: center;
+                font-size: 20px;
+                font-weight: 200;
+                outline: none;
+                border: none;
+                background: none;
+                border-bottom: 1px solid white;
+                width: 200px;
+            }
+            #w:focus, #z:focus, #h:focus{
+				border-bottom: 2px solid #ffffff;
+				width: 100px;
+				transition: 0.5s;
+			}
+
+              
+
+                #result{
+                    color: yellowgreen;
+                }
+
+                #result2{
+                    color: yellowgreen;
+                }
+
+               
+                #btn{
+                    font-family: inherit;
+                    margin-top: 10px;
+                    border: none;
+                    color: #fff;
+                    background-color: black;
+                    width: 200px;
+                    height: 50px;
+                    padding: 10px;
+                    border-radius: 30px;
+                    outline: none;
+                    cursor: pointer;
+                }
+                #btn:hover{
+                    box-shadow: 1px 1px 10px greenyellow;
+                }
+
+                .side{
+                    padding-top: 70px;
+                    padding-inline: 200px;
+                    column-gap: 420px; 
+                    display: flex;
+                    width: 500px; 
+                    /* text-align: left; */
+                    /* top: 50%; */
+                    /* left: 50%; 
+                    right: 50%; */
+                    /* transform: translate(50%, 50%);  */
+                    /* padding: 20px; */
+                   /* border-radius: 10px; */
+                }
+
+                .calc1{
+                    /* height: 200px;
+                    width: 200px; */
+                    float: left;
+                    /* align-items: left; */
+                }
+
+                .calc2{
+                    /* height: 200px;
+                    width: 200px; */
+                    float: right;
+                    /* align-items: right; */
+                }
+
+
+               
+        </style>
+
+        <div class="side">
+        <div class="calc1">
+			<h2 style=" color: greenyellow;">BMI <br>Calculator</h2>
+            <br>
+			<p class="text">Height <span style="color: greenyellow; font-size: 13px;">(Cm) </span></p>
+			<input type="text" id="h"><br>
+            <br>
+			<p class="text">Weight  <span style="color: greenyellow; font-size: 13px;">(Kg) </span></p>
+			<input type="text" id="w"><br>
+			<p id="result"></p>
+			<button style="background-color: black; color: greenyellow; border: 1px; size: 100px;" id="btn" onClick="BMI()">Calculate</button>
+            
+            <!-- <ul style=
+            "color: white; 
+            font-size: 20px;
+             width: 350px;
+              padding-top: 0px;
+               text-align: left;" >     -->
+               <ul style="color: white; font-size: 20px; width: 282px; text-align: left; padding-top: 86px;">
+                <li>BMI < 18.5 , Underweight   </li>
+               <li>BMI = 18.5 to 24.9 , Healthy  </li>
+               <li>BMI = 25.0 to 29.9 , Overweight  </li>
+               <li>BMI > 30.0 , Obese</li>
+           </ul>
+
+            
+		</div>
+
+
+        <div class="calc2">
+			<h2 style=" color: greenyellow;">Calories <br>Calculator</h2>
+            <br>
+			<p class="text1">Weight <span style="color: greenyellow; font-size: 13px;">(Kg) </span></p>
+			<input type="text" id="z"><br>
+            <br>
+			<!-- <p class="text">Weight  <span style="color: greenyellow; font-size: 13px;">(Kg) </span></p>
+			<input type="text" id="w"><br> -->
+			<p id="result2"></p>
+			<button style="background-color: black; color: greenyellow; border: 1px; size: 100px;" id="btn" onClick="calo()">Calculate</button>
+            <br><br><br><br>
+
+            <ul style="color: white; font-size: 20px; width: 350px; padding-top: 100px; text-align: left;" >
+                <li> -100 calories to loss weight </li>
+                <li> +75 calories to main-gain weight </li>
+                <li> +400 calories to gain weight</li>
+            </ul>
+
+		</div>
+        </div>
+
+
+        <script type="text/javascript">
+            function BMI() {
+                var h=document.getElementById('h').value;
+                var w=document.getElementById('w').value;
+                var bmi=w/(h/100*h/100);
+                var bmio=(bmi.toFixed(2));
+    
+                document.getElementById("result").innerHTML="Your BMI is " + bmio;
+            }
+
+            function calo(){
+                var z=document.getElementById('z').value;
+                var food=z*29;
+                var foodo=(food.toFixed(2));
+                document.getElementById("result2").innerHTML="Your daily calori intake should be "+foodo;
+            }
+        </script>
+
+            <!-- <div class="side">
+                <ul style="color: white; font-size: 20px; width: 350px; padding-top: 0px; text-align: left;" >
+                     <li>BMI < 18.5 , Underweight range.  </li>
+                    <li>BMI = 18.5 to 24.9 , Healthy range. </li>
+                    <li>BMI = 25.0 to 29.9 , Overweight range.  </li>
+                    <li>BMI > 30.0 , Obese range.</li>
+                </ul>
+            </div>
+
+
+            <ul style="color: white; font-size: 20px; width: 350px; padding-top: 100px; text-align: left;" >
+                <li> -100 calories to loss weight </li>
+                <li> +100 calories to main-gain weight </li>
+                <li> +400 calories to gain weight</li>
+            </ul>
+
+          
+
+         -->
+
+
+
+
+
+
+
+        <br><br><br><br><br><br>
+        <div class="line"></div><br><br><br>
+
+
+<!-- calc starts -->
+
+
+   
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer -->
+    <section class="footer">
+        <div id="mid" class="icon">
+            <a href="https://www.linkedin.com/in/saunved-palve-aa9342236/"> <span><i class="fab  fa-linkedin"></i></span></a> 
+
+            <a href="https://twitter.com/Saunved1"> <span><i class="fab  fa-twitter"></i></span></a> 
+ 
+            <a href="https://www.instagram.com/saunved1/t"> <span><i class="fab  fa-instagram"></i></span></a> 
+
+        </div>
+    <p style="color: greenyellow; font-size: small;" ><spa style="color: white; font-size: small;"> &copy;</spa> Made by<span style="color: white;"> Saunved Palve</span></p>
+    </section>
+    <div class="line"></div>
+</body>
+</html>

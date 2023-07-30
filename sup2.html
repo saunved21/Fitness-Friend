@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FF.Supplements</title> 
+    <link rel="stylesheet" type="text/css" href="webcss.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;0,700;1,200;1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<script>
+    var app1 = angular
+            .module("myModule", [])
+            .controller("myController", function ($scope) {
+    
+                var employees1 = [
+                    { name: "Whey Protein", desc: "  Whey protein is the protein from whey, the watery portion of milk that separates from the curds when making cheese. It is commonly used as a protein supplement. Whey protein might improve the nutrient content of the diet and also have effects on the immune system. People commonly use whey protein for improving athletic performance and increasing strength. Whey protein is also used for asthma, diabetes, weight loss, and many other conditions, but there is no good scientific evidence to support most of these uses. " },
+                ];
+    
+                $scope.employees1 = employees1;
+    
+                var employees2 = [
+                    { name: "Creatine", desc: "Creatine is a substance found naturally in muscle cells. It helps your muscles produce energy during heavy lifting or high intensity exercise.  Taking creatine as a supplement is very popular among athletes and bodybuilders. They use it to gain muscle, and improve exercise performance.Creatine can improve health and athletic performance in several ways. In high intensity exercise, its primary role is to increase the phosphocreatine stores in your muscles. It is the most well researched supplement in the industry. Most safest supplement." },
+                ];
+    
+                $scope.employees2 = employees2;
+    
+                var employees3 = [
+                    { name: "Pre-Workout", desc: "Pre-workout supplements, also called “pre-workouts,” are meant to give you energy for when you exercise. The main ingredient in most of them is caffeine. These supplements often come in pill or powder form. Some of the ingredients in certain pre-workouts can be good for your health and your workouts. But the supplements can bring on side effects that you'll need to be aware of. Don't take too much." },
+                ];
+    
+                $scope.employees3 = employees3;
+    
+                var employees4 = [
+                    { name: "Omega-3", desc: "Omega-3 fatty acids are a type of polyunsaturated fat found in certain types of fish and other seafood, as well as some plants and nut oils. Omega-3 supplements are commonly taken as a way to increase the intake of these beneficial fats. Some benefits associated with omega-3 supplementation include reducing the risk of heart disease, improving joint health, and boosting brain function. However, it's important to note that not all omega-3 supplements are equal and some may contain impurities or contaminants." },
+                ];
+    
+                $scope.employees4 = employees4;
+    
+                var employees5 = [
+                    { name: "Vitamins-Minerals", desc: "Proper balance and adequate levels of essential nutrients is important for a range of complex processes in our body. When vitamins are taken as supplements, they are introduced into the body at levels that could never be achieved by eating even the healthiest of diets. Supplementation can also result in large doses of a single vitamin being eaten alone. When vitamins are consumed from foods, they have many companions to help them along the way. " },
+                ];
+    
+                $scope.employees5 = employees5;
+    
+                var employees6 = [
+                    { name: "Taurine", desc: "Taurine is a type of chemical called an amino sulfonic acid. It occurs naturally in the body. The best food sources are meat, fish, and eggs.Taurine has important functions in the heart and brain. It helps support nerve growth. It might also benefit people with heart failure by lowering blood pressure and calming the nervous system. This might help prevent heart failure from becoming worse. People take taurine for congestive heart failure (CHF) and swelling of the liver. It is also used for obesity, athletic performance, fatigue, diabetes, and many other conditions, but there is no good scientific evidence to support these uses." },
+                ];
+    
+                $scope.employees6 = employees6;
+            });
+        </script>
+
+</head> 
+<body ng-app="myModule">
+
+    <a class="gotop" href="#"> <i class="fas  fa-arrow-up"></i></a>
+
+    
+
+
+
+    <!-- header -->
+    <section class="sub-header2">
+       <nav> 
+            <!-- <div class="logo-o" id="logo-o"> <a href="web.html"><img src="logo.jpg"></a><br>  </div>  -->
+            <a href="index.html"><img src="logo.jpg"></a><br> 
+            <div class="nav-links" id="navlinks">
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="work.html">Workouts</a></li>
+                <li><a href="">Supplements</a></li>
+                <li><a href="calc.html">Gym Calc</a></li>
+                <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <!-- <i class="fa  fa-bars" onclick="showMenu()"></i> -->
+        </nav>
+         <h1 style="padding-top: 10%; color: greenyellow;" >Supplements</h1>
+    </section>
+    <hr style="background-color: greenyellow; width: 100vw; height: 5vh;">
+
+
+
+
+    <style>
+
+*{
+	margin: 0;
+	padding: 0;
+    font-family: 'Oswald', sans-serif;
+    background-image: wp2058337;
+}
+
+
+
+
+.row{
+    padding: 5% 6%;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    color: greenyellow;
+    display: flex;
+    justify-content: space-between;
+
+}
+/*
+.row h3{
+    color: #ffffff;
+}
+*/
+
+.events-col img{
+    height: 45%;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.events-col{
+    flex-basis: 31%;
+    margin-bottom: 10%;
+}
+/*
+.hero-btn{
+    margin-top: 5%;
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 12px 24px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover{
+    border: 1px solid #cbc7ff;
+    background: #cbc7ff;
+    transition: 1s;
+}*/
+
+.search-box{
+    margin-left: 75%;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    background: greenyellow;
+    font-size: xx-large;
+
+}
+
+</style>
+
+
+
+
+    <h2 style="padding-left: 100px; padding-right: 100px; color: white; padding-top: 50px; padding-bottom: 50px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;";">Supplements are not necessary for building a good physique, but they can be helpful for some people in specific situations. A balanced diet that provides adequate amounts of macronutrients (carbohydrates, protein, and fat) and micronutrients (vitamins and minerals) is essential for muscle growth and overall health. However, some individuals may have difficulty meeting their nutrient needs through food alone and may benefit from supplements. It's important to consult with a doctor or registered 
+        dietitian before starting any supplementation to ensure safety and efficency.</h2>
+       
+       
+        <div class="line"></div><br><br><br>
+
+        <div ng-controller="myController">
+            <span class="search-box">
+                <label> Search : <label>
+                    <input type="text" ng-model="searchText" placeholder="Search event" size="15">
+            </span>
+            <br /><br />
+                <div class="row">
+                    <div ng-repeat="employee1 in employees1 | filter:searchText" class="events-col">
+                        <img src="pngegg.png">
+                        <h3>{{ employee1.name }}</h3>
+                        <br>
+                        <p>{{ employee1.desc }}</p>
+                         <span style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" ><h4>Amazon:  <a href="https://www.amazon.in/s?k=creatine&sprefix=crea%2Caps%2C185&ref=nb_sb_ss_ts-doa-p_2_4" class="buy-btn">  Buy now</a><BR>
+              <br>  Flipkart:  <a href="https://www.flipkart.com/search?q=creatine&sid=hlc%2Cetg%2C1rx&as=on&as-show=on&otracker=AS_QueryStore_OrganicAutoSuggest_1_4_na_na_ps&otracker1=AS_QueryStore_OrganicAutoSuggest_1_4_na_na_ps&as-pos=1&as-type=RECENT&suggestionId=creatine%7CProtein+Supplement&requestId=61417084-431c-4d74-b1af-2def7d88b09e&as-backfill=on" class="buy-btn">  Buy now</a>
+                <br></h4></span>
+                    </div>
+    
+
+
+                    <div ng-repeat="employee2 in employees2 | filter:searchText" class="events-col">
+                        <img src="pngegg copy.png">
+                        <h3>{{ employee2.name }}</h3>
+                        <br>
+                        <p>{{ employee2.desc }}</p>
+                        
+                       <span style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" ><h4>Amazon:  <a href="https://www.amazon.in/s?k=creatine&sprefix=crea%2Caps%2C185&ref=nb_sb_ss_ts-doa-p_2_4" class="buy-btn">  Buy now</a><BR>
+              <br>  Flipkart:  <a href="https://www.flipkart.com/search?q=creatine&sid=hlc%2Cetg%2C1rx&as=on&as-show=on&otracker=AS_QueryStore_OrganicAutoSuggest_1_4_na_na_ps&otracker1=AS_QueryStore_OrganicAutoSuggest_1_4_na_na_ps&as-pos=1&as-type=RECENT&suggestionId=creatine%7CProtein+Supplement&requestId=61417084-431c-4d74-b1af-2def7d88b09e&as-backfill=on" class="buy-btn">  Buy now</a>
+                <br></h4></span>
+                    </div>        
+    
+
+
+                    <div ng-repeat="employee3 in employees3 | filter:searchText" class="events-col">
+                        <img src="pngegg copy 2.png">
+                        
+                        <h3>{{ employee3.name }}</h3>
+                        <br>
+                        <p>{{ employee3.desc }}</p>
+                        <br><br><br><br><br>
+ <span style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" ><h4>Amazon:  <a href="https://www.amazon.in/s?k=pre+workout&crid=2F751W2EY52ES&sprefix=pre%2Caps%2C186&ref=nb_sb_ss_ts-doa-p_2_3" class="buy-btn">  Buy now</a><BR>
+                    <br>  Flipkart:  <a href="https://www.flipkart.com/search?q=pre+workout&sid=hlc%2Cetg%2C1rx&as=on&as-show=on&otracker=AS_QueryStore_OrganicAutoSuggest_1_3_na_na_ps&otracker1=AS_QueryStore_OrganicAutoSuggest_1_3_na_na_ps&as-pos=1&as-type=RECENT&suggestionId=pre+workout%7CProtein+Supplement&requestId=6224bfe7-c86f-4d43-8a97-e98f861043a8&as-backfill=on" class="buy-btn">  Buy now </a>
+                <br></h4></span>                    </div>
+                </div>
+    
+                <div class="row">
+                    <div ng-repeat="employee4 in employees4 | filter:searchText" class="events-col">
+                        <img src="pngegg copy 3.png">
+                        <h3>{{ employee4.name }}</h3>
+                        <br>
+                        <p>{{ employee4.desc }}</p>
+                        <br><br><br>
+<span style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" ><h4>Amazon:  <a href="https://www.amazon.in/s?k=omega+3&crid=2H8X5BISJZKV8&sprefix=omeg%2Caps%2C183&ref=nb_sb_ss_ts-doa-p_2_4" class="buy-btn">  Buy now</a><BR>
+                    <br> Flipkart:  <a href="https://www.flipkart.com/search?q=omega+3+capsules&sid=hlc%2Cetg%2Cqtw&as=on&as-show=on&otracker=AS_QueryStore_OrganicAutoSuggest_1_3_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_3_na_na_na&as-pos=1&as-type=RECENT&suggestionId=omega+3+capsules%7CVitamin+Supplement&requestId=d62709ce-6a80-465b-a887-cf3fe3489996&as-backfill=on" class="buy-btn"> Buy now</a>     
+                <br></h4></span>                    </div>
+    
+                    <div ng-repeat="employee5 in employees5 | filter:searchText" class="events-col">
+                        <img src="pngegg copy 4.png">
+                        <h3>{{ employee5.name }}</h3>
+                        <br>
+                        <p>{{ employee5.desc }}</p>
+                        <br><br><br><br><br><br>
+<span style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" ><h4>Amazon:  <a href="https://www.amazon.in/s?k=vitamins+and+minerals+gym&crid=3VADHNPKL019Y&sprefix=vitamins+and+minerals+gym%2Caps%2C191&ref=nb_sb_noss" class="buy-btn">  Buy now</a><BR>
+                    <br>   Flipkart:  <a href="vitamins and minerals" class="buy-btn">  Buy now</a>
+            <br></h4></span>                     </div>
+    
+                    <div ng-repeat="employee6 in employees6 | filter:searchText" class="events-col">
+                        <img src="pngegg copy 7.png">
+                        <h3>{{ employee6.name }}</h3>
+                        <br>
+                        <p>{{ employee6.desc }}</p>
+                        <br>
+  <span style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" ><h4>Amazon:  <a href="https://www.amazon.in/s?k=vitamins+and+minerals+gym&crid=3VADHNPKL019Y&sprefix=vitamins+and+minerals+gym%2Caps%2C191&ref=nb_sb_noss" class="buy-btn">  Buy now</a><BR>
+                    <br>   Flipkart:  <a href="vitamins and minerals" class="buy-btn">  Buy now</a>
+            <br></h4></span>                     </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- supplemts starts -->
+
+
+    <section class="sup-us">
+        <div class="row">
+            <div class="sup-col">
+                <br><br>
+                <h1 style="color: greenyellow; font-family: Arial, Helvetica, sans-serif;"> <u> Whey Protein </u></h1>
+                <p style="color: white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> 
+                    Whey protein is the protein from whey, the watery portion of milk that separates from the curds when making cheese. It is commonly used as a protein supplement.
+                    Whey protein might improve the nutrient content of the diet and also have effects on the immune system.
+                    People commonly use whey protein for improving athletic performance and increasing strength. Whey protein is also used for asthma, diabetes, weight loss, and many other conditions, but there is no good scientific evidence to support most of these uses.
+                    <br><ul style="list-style-type: square; color: greenyellow; font-family: Arial, Helvetica, sans-serif;">
+                        <li>One should consume 1g per body weight lbs.</li>
+                        <li>For example, if a person weighs 155lbs ie 70 kg, that person shoudl consume 155g of protein in a day.</li>
+                    </ul>                     
+                </p>
+                <span style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"><h4>Amazon:  <a href="https://www.amazon.in/s?k=whey+protein&sprefix=wheny%2Caps%2C178&ref=nb_sb_ss_sc_2_4" class="buy-btn">Buy now</a><BR>
+                    <br>  Flipkart:  <a href="https://www.flipkart.com/search?q=whey+protein&sid=hlc%2Cetg%2C1rx&as=on&as-show=on&otracker=AS_QueryStore_OrganicAutoSuggest_1_4_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_4_na_na_na&as-pos=1&as-type=RECENT&suggestionId=whey+protein%7CProtein+Supplement&requestId=69b1f6a3-15c2-45aa-8cf4-4edb09e04ea7&as-backfill=on" class="buy-btn"> Buy now</a></span>
+               <br></h4></div>
+
+            <div class="about1-col">
+                <img src="pngegg.png">
+            </div>
+        </div>
+    </section>
+    <br><br>
+
+
+    <div class="line"></div>
+
+
+
+    <section class="sup-us">
+        <div class="row">
+            <div class="sup-col">
+                <br><br><br> 
+                <h1 style="color: greenyellow; font-family: Arial, Helvetica, sans-serif;"><u>Creatine </u> </h1>
+                <p style="color: white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> 
+                    Creatine is a substance found naturally in muscle cells. It helps your muscles produce energy during heavy lifting or high intensity exercise.
+                    Taking creatine as a supplement is very popular among athletes and bodybuilders. They use it to gain muscle, enhance strength, and improve exercise performance.Creatine can improve health and athletic performance in several ways.
+                    In high intensity exercise, its primary role is to increase the phosphocreatine stores in your muscles. It is the most well researched supplement in the industry.
+                    <br><ul style="list-style-type: square; color: greenyellow; font-family: Arial, Helvetica, sans-serif;">
+                        <li>5g of creatine per day</li>
+                        <li>Only for adult use ie 18+</li>
+                    </ul>
+                </p>
+                <span style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" ><h4>Amazon:  <a href="https://www.amazon.in/s?k=creatine&sprefix=crea%2Caps%2C185&ref=nb_sb_ss_ts-doa-p_2_4" class="buy-btn">  Buy now</a><BR>
+              <br>  Flipkart:  <a href="https://www.flipkart.com/search?q=creatine&sid=hlc%2Cetg%2C1rx&as=on&as-show=on&otracker=AS_QueryStore_OrganicAutoSuggest_1_4_na_na_ps&otracker1=AS_QueryStore_OrganicAutoSuggest_1_4_na_na_ps&as-pos=1&as-type=RECENT&suggestionId=creatine%7CProtein+Supplement&requestId=61417084-431c-4d74-b1af-2def7d88b09e&as-backfill=on" class="buy-btn">  Buy now</a>
+
+                <br></h4></span> </div>
+
+            <div class="about1-col">
+                <img src="pngegg copy.png">
+            </div>
+        </div>
+    </section>
+    <br><br> <br>
+
+
+    <div class="line"></div>
+
+
+
+    <section class="sup-us">
+        <div class="row">
+            <div class="sup-col">
+                <br><br><br><br>
+                <h1 style="color: greenyellow; font-family: Arial, Helvetica, sans-serif;"> <u>Pre-Workout </u> </h1>
+                <p style="color: white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> 
+                    Pre-workout supplements, also called “pre-workouts,” are meant to give you energy for when you exercise. The main ingredient in most of them is caffeine. These supplements often come in pill or powder form. Some of the ingredients in certain pre-workouts can be good for your health and your workouts. But the supplements can bring on side effects that you'll need to be aware of. 
+                    Don't take too much. Some side effects of pre-workout supplements can include: 
+                    <br><ul style="list-style-type: square; color: greenyellow; font-family: Arial, Helvetica, sans-serif;">
+                        <li> Digestive symptoms</li>
+                        <li>Irregular heartbeat</li>
+                        <li> Rise in blood pressure</li>
+                        <li> Changes in blood sugar</li>
+                        <li> The daily intake of caffeine shoudl not exceed 500mg.</li>
+                        
+                    </ul>
+                </p>
+                <span style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" ><h4>Amazon:  <a href="https://www.amazon.in/s?k=pre+workout&crid=2F751W2EY52ES&sprefix=pre%2Caps%2C186&ref=nb_sb_ss_ts-doa-p_2_3" class="buy-btn">  Buy now</a><BR>
+                    <br>  Flipkart:  <a href="https://www.flipkart.com/search?q=pre+workout&sid=hlc%2Cetg%2C1rx&as=on&as-show=on&otracker=AS_QueryStore_OrganicAutoSuggest_1_3_na_na_ps&otracker1=AS_QueryStore_OrganicAutoSuggest_1_3_na_na_ps&as-pos=1&as-type=RECENT&suggestionId=pre+workout%7CProtein+Supplement&requestId=6224bfe7-c86f-4d43-8a97-e98f861043a8&as-backfill=on" class="buy-btn">  Buy now </a>
+                <br></h4></span> </div>
+
+            <div class="about1-col">
+                <img src="pngegg copy 2.png">
+            </div>
+        </div>
+    </section>
+    <br><br> <br><br> <br><br>
+
+    <div class="line"></div>
+
+
+
+    <section class="sup-us">
+        <div class="row">
+            <div class="sup-col">
+               <br> <br> <br> <br>
+                <h1 style="color: greenyellow; font-family: Arial, Helvetica, sans-serif;"><u> Omega 3</u>  </h1>
+                <p style="color: white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> 
+
+                    Omega-3 fatty acids are a type of polyunsaturated fat found in certain types of fish and other seafood, as well as some plants and nut oils. Omega-3 supplements are commonly taken as a way to increase the intake of these beneficial fats. Some benefits associated with omega-3 supplementation include reducing the risk of heart disease, improving joint health, and boosting brain function. However, it's important to note that not all omega-3 supplements are equal and some may contain impurities or contaminants.
+                </p>
+                <span style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" ><h4>Amazon:  <a href="https://www.amazon.in/s?k=omega+3&crid=2H8X5BISJZKV8&sprefix=omeg%2Caps%2C183&ref=nb_sb_ss_ts-doa-p_2_4" class="buy-btn">  Buy now</a><BR>
+                    <br> Flipkart:  <a href="https://www.flipkart.com/search?q=omega+3+capsules&sid=hlc%2Cetg%2Cqtw&as=on&as-show=on&otracker=AS_QueryStore_OrganicAutoSuggest_1_3_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_3_na_na_na&as-pos=1&as-type=RECENT&suggestionId=omega+3+capsules%7CVitamin+Supplement&requestId=d62709ce-6a80-465b-a887-cf3fe3489996&as-backfill=on" class="buy-btn"> Buy now</a>     
+                <br></h4></span></div>
+                <div class="about1-col">
+                <img src="pngegg copy 3.png">
+            </div>
+        </div>
+    </section>
+
+    <div class="line"></div>
+
+
+
+    <section class="sup-us">
+        <div class="row">
+            <div class="sup-col">
+                <br> <br><br> <br><br> 
+                <h1 style="color: greenyellow; font-family: Arial, Helvetica, sans-serif;"><u> Vitamins and Minerals</u> </h1>
+                <p style="color: white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> 
+                  Proper balance and adequate levels of essential nutrients is important for a range of complex processes in our body. When vitamins are taken as supplements, they are introduced into the body at levels that could never be achieved by eating even the healthiest of diets.
+                    Supplementation can also result in large doses of a single vitamin being eaten ‘alone.’ When vitamins are consumed from foods, they have many companions to help them along the way. 
+                </p>
+                <span style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" ><h4>Amazon:  <a href="https://www.amazon.in/s?k=vitamins+and+minerals+gym&crid=3VADHNPKL019Y&sprefix=vitamins+and+minerals+gym%2Caps%2C191&ref=nb_sb_noss" class="buy-btn">  Buy now</a><BR>
+                    <br>   Flipkart:  <a href="vitamins and minerals" class="buy-btn">  Buy now</a>
+            <br></h4></span> </div>
+
+            <div class="about1-col">
+                <img src="pngegg copy 4.png">
+            </div>
+        </div>
+    </section>
+    <div class="line"></div>
+
+
+
+    <section class="sup-us">
+        <div class="row">
+            <div class="sup-col">
+                <br> <br><br> <br><br> 
+                <h1 style="color: greenyellow; font-family: Arial, Helvetica, sans-serif;"><u> Vitamins and Minerals</u> </h1>
+                <p style="color: white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> 
+                    Taurine is a type of chemical called an amino sulfonic acid. It occurs naturally in the body. The best food sources are meat, fish, and eggs.Taurine has important functions in the heart and brain. It helps support nerve growth. It might also benefit people with heart failure by lowering blood pressure and calming the nervous system. This might help prevent heart failure from becoming worse. People take taurine for congestive heart failure (CHF) and swelling of the liver . It is also used for obesity, athletic performance, fatigue, diabetes, and many other conditions, but there is no good scientific evidence to support these uses.
+                </p>
+                <span style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" ><h4>Amazon:  <a href="https://www.amazon.in/s?k=vitamins+and+minerals+gym&crid=3VADHNPKL019Y&sprefix=vitamins+and+minerals+gym%2Caps%2C191&ref=nb_sb_noss" class="buy-btn">  Buy now</a><BR>
+                    <br>   Flipkart:  <a href="vitamins and minerals" class="buy-btn">  Buy now</a>
+            <br></h4></span> </div>
+
+            <div class="about1-col">
+                <img src="pngegg copy 7.png">
+            </div>
+        </div>
+    </section>
+    <div class="line"></div>
+
+
+
+
+
+
+    <!-- footer -->
+    <section class="footer">
+        <div class="icon">
+            <a href="https://www.linkedin.com/in/saunved-palve-aa9342236/"> <span><i class="fab  fa-linkedin"></i></span></a> 
+
+            <a href="https://twitter.com/Saunved1"> <span><i class="fab  fa-twitter"></i></span></a> 
+ 
+            <a href="https://www.instagram.com/saunved1/t"> <span><i class="fab  fa-instagram"></i></span></a> 
+<br>
+        </div>
+    <p style="color: greenyellow; font-size: small;" ><spa style="color: white; font-size: small;"> &copy;</spa> Made by<span style="color: white;"> Saunved Palve</span></p>
+    </section>
+    <div class="line"></div>
+</body>
+</html>
+
+
+

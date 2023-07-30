@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<title>ADMIN LOGIN</title>
+<link rel="stylesheet" href="stylelogin.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<style>
+/* General Styling */
+body {
+  background-color: yellowgreen;
+  color: black;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* Navigation */
+nav {
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+}
+
+nav img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Login Box */
+.loginbox {
+  background-color: white;
+  border-radius: 10px;
+  margin: 50px auto;
+  max-width: 600px;
+  padding: 20px;
+  text-align: center;
+}
+
+.loginbox h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.loginbox p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.loginbox input[type="text"],
+.loginbox input[type="password"] {
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+.submit-btn {
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: yellowgreen;
+}
+
+/* Table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+div {
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+</style>
+
+<body>
+
+<div class="loginbox">
+<h1>Admin Login</h1>
+<form id="login-form">
+<p>Username</p>
+<input type="text" id="username">
+<p>Password</p>
+<input type="password" id="password"><br>
+<button type="submit" class="submit-btn">LOGIN</button>
+<nav>
+    <a href="index.html"><img src="logo.jpg "></a>
+    </nav>
+<!-- <a href="index.html" span class="guest">Continue as a guest</a> -->
+</form>
+</div>
+
+<script>
+document.getElementById("login-form").addEventListener("submit", function(event) {
+event.preventDefault();
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+if (username === "cool" && password === "69") {
+window.location.href = "disp.php";
+} else {
+alert("Incorrect username or password!");
+}
+});
+</script>
+
+</body>
+</html
