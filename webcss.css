@@ -43,7 +43,7 @@ html{
 .header{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0),rgba(4, 9, 30, 0)),url(bgbg.mp4);
+    background-image: linear-gradient(rgba(4, 9, 30, 0),rgba(4, 9, 30, 0)),url(/Users/saunved/Desktop/Fitness_Friend/realpics/bgbg.mp4);
     background-position: center; 
     background-color: rgba(165, 42, 42, 0);
     background-size: cover;
